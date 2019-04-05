@@ -1,12 +1,19 @@
-﻿namespace Practice.Organization
+namespace Practice.Organization
 {
     /// <summary>
     ///     Скрытая реализация представления об отделе предприятия.
     /// </summary>
-    internal struct Department
+    internal struct Department : IDepartment
     {
         /*
          * TODO #2: Реализуйте интерфейс IDepartment для структуры Department
          */
+
+	public string Name { get; }
+
+        public Department(string name)
+        {
+            Name = name;
+        }
     }
 }
